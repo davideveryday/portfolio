@@ -1,1 +1,2 @@
-console.log("Hello! This is a Javascript project.");
+const content = document.getElementById('content');
+content.innerHTML = `Hello, world!`;
