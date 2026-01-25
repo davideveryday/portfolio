@@ -5,24 +5,19 @@ export default class ThemeHandler {
     constructor(rootElement) {
         this.#rootElement = rootElement;
         this.loadThemeFromLocalStorage();
-        if (this.#currentTheme !== null) this.#currentTheme = this.#rootElement.getAttribute("data-bs-theme");
+        if (this.#currentTheme === null) this.select(this.#rootElement.getAttribute("data-bs-theme"));
     }
 
     loadThemeFromLocalStorage() {
+        const regex = /^(dark|light)$/;
         const localTheme = localStorage.getItem("theme");
-        this.#currentTheme === "light" ? this.select("dark") : this.select("light");
-        if (localTheme === "light" || localTheme === "dark") {
-            this.#currentTheme = localTheme;
-        } else {
-            this.#currentTheme = null;
+        if (regex.test(localTheme)) {
+            localTheme === null ? this.#currentTheme = null : this.select(localTheme);
         }
     }
 
     saveThemeInLocalStorage(theme) {
-        const regex = /^(dark|light)$/;
-        if (regex.test(theme)) {
-            localStorage.setItem("theme", theme);
-        }
+        localStorage.setItem("theme", theme);
     }
 
     select(theme) {
