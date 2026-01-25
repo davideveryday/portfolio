@@ -20,18 +20,26 @@ function Contact() {
     return div;
 }
 
+function TextElements() {
+    return [
+        `<h1 class="main-container-title">Olá, eu sou o <span class="highlight">David Castro</span></h1>`,
+        `<h2 class="main-container-subtitle">Estudante de ciência da computação e desenvolvedor backend</h2>`,
+        `<p class="main-container-p">Construindo aplicações web com foco no backend</p>`
+    ]
+
+}
+
 export function MainBody() {
     const mainContainer = document.createElement("div");
     mainContainer.classList.add("main-container");
+    mainContainer.classList.add("general-container");
     const textSectionDiv = document.createElement("div");
     textSectionDiv.classList.add("main-container-text");
 
-    const title = `<h1 class="main-container-title">Olá, eu sou o <span class="highlight">David Castro</span></h1>`;
-    const subtitle = `<h2 class="main-container-subtitle">Estudante de ciência da computação e desenvolvedor backend</h2>`;
-    const phrase = `<p class="main-container-p">Construindo aplicações web com foco no backend</p>`;
-
+    const [title, subtitle, phrase] = TextElements();
     textSectionDiv.innerHTML = `${title}${subtitle}${phrase}`;
     mainContainer.appendChild(textSectionDiv);
+
     mainContainer.appendChild(ImageContainer(iguana));
     mainContainer.appendChild(Contact());
 
