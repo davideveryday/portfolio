@@ -65,6 +65,7 @@ table {
 	--title-color: var(--bronze-yellow);
 	--highlight2: var(--dark-slate-grey);
 	--table-alternating: var(--darker-white);
+	--shadow-color: rgba(78, 153, 78, 0.2);
 }
 
 [data-bs-theme="light"] {
@@ -75,6 +76,7 @@ table {
 	--highlight2: var(--dark-slate-grey)
 	--table-alternating: var(--darker-white);
 	--base-color: var(--darker-slate-grey);
+	--shadow-color: rgba(78, 153, 78, 0.2);
 }
 
 
@@ -87,6 +89,7 @@ table {
 	--highlight2: var(--lilac-ash);
 	--table-alternating: var(--darker-slate-grey);
 	--base-color: #FFF6AB;
+	--shadow-color: rgba(167, 182, 167, 0.2);
 }
 /* end dark mode */
 
@@ -115,8 +118,16 @@ nav {
 .nav-container-buttons {
 	display: flex;
 	align-content: center;
-	gap: 2px;
+	gap: 15px;
 	padding: 1rem;
+}
+
+.nav-container-buttons a {
+	box-shadow: 3px 3px 3px 3px var(--shadow-color);
+}
+
+.nav-container-buttons button {
+	box-shadow: 3px 3px 3px 3px var(--shadow-color);
 }
 
 /* end navbar */
@@ -262,6 +273,7 @@ img {
 
 
 button, .link-btn {
+	box-shadow: 8px 8px 3px 3px var(--shadow-color);
 	padding: clamp(.1rem, .5rem, .8rem);
 	background-color: rgba(0, 0, 0, 0);
 	border: 2px solid var(--text-color);
@@ -277,6 +289,7 @@ button:hover, .link-btn:hover {
 
 table {
 	width: 50%;
+	box-shadow: 8px 8px 3px 3px var(--shadow-color);
 }
 
 td,

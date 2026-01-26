@@ -15,8 +15,8 @@ function Contact() {
     const div = document.createElement("div");
     div.classList.add("main-container-contact");
     div.innerHTML = 
-        `<a class="main-github-contact" href="https://github.com/davideveryday/"/>${github} Github </a>
-        <a class="main-linkedin-contact" href="https://www.linkedin.com/in/david-castro-dev/">${linkedin} LinkedIn</a>`;
+        `<a class="main-github-contact link-btn" href="https://github.com/davideveryday/"/>${github} Github </a>
+        <a class="main-linkedin-contact link-btn" href="https://www.linkedin.com/in/david-castro-dev/">${linkedin} LinkedIn</a>`;
     return div;
 }
 
