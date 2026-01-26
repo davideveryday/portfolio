@@ -26,7 +26,7 @@ export default class ThemeHandler {
         this.#saveThemeInLocalStorage(theme);
     }
 
-    toggleTheme() {
+    toggle() {
         this.#currentTheme === "light" ? this.#select("dark") : this.#select("light");
     }
 }

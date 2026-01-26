@@ -5,8 +5,12 @@ import { About } from "./pages/about";
 
 const content = document.getElementById("content");
 const body = document.getElementsByTagName("body")[0];
+const themeBtn = document.getElementById("theme");
 
-const th = new ThemeHandler(body);
+const themeHandler = new ThemeHandler(body);
+
+themeBtn.addEventListener("click", () => themeHandler.toggle());
+
 content.appendChild(MainBody());
 content.appendChild(About());
 

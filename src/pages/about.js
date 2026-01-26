@@ -57,6 +57,7 @@ export function About() {
     aboutSection.classList.add("about-container-section");
     aboutContainer.classList.add("about-container");
     aboutContainer.classList.add("general-container");
+    aboutContainer.setAttribute("id", "about");
     aboutContainer.innerHTML = title;
 
     aboutSection.appendChild(document.createTextNode(p));

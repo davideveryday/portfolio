@@ -258,7 +258,7 @@ img {
 }
 
 
-button {
+button, .link-btn {
 	padding: clamp(.1rem, .5rem, .8rem);
 	background-color: rgba(0, 0, 0, 0);
 	border: 2px solid var(--text-color);
@@ -267,7 +267,7 @@ button {
 	font-weight: 900;
 }
 
-button:hover {
+button:hover, .link-btn:hover {
 	cursor: pointer;
 	background-color: rgba(0, 0, 0, 0.1);
 }
