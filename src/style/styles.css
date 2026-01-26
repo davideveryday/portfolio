@@ -46,7 +46,7 @@ table {
 
 :root {
 	--bronze-yellow: rgb(246, 189, 96);
-	--pacific-blue: rgb(127, 183, 190);
+	--pacific-blue: rgb(102, 145, 151);
 	--lilac-ash: rgb(186, 167, 176);
 	--dark-slate-grey: rgb(65, 97, 101);
 	--darker-slate-grey: rgba(46, 68, 71, 0.692);
@@ -61,6 +61,7 @@ table {
 	--bg-color1: var(--white);
 	--bg-color2: var(--darker-white);
 	--text-color: var(--pacific-blue);
+	--base-color: var(--darker-slate-grey);
 	--title-color: var(--bronze-yellow);
 	--highlight2: var(--dark-slate-grey);
 	--table-alternating: var(--darker-white);
@@ -73,6 +74,7 @@ table {
 	--title-color: var(--bronze-yellow);
 	--highlight2: var(--dark-slate-grey)
 	--table-alternating: var(--darker-white);
+	--base-color: var(--darker-slate-grey);
 }
 
 
@@ -84,6 +86,7 @@ table {
 	--title-color: var(--bronze-yellow);
 	--highlight2: var(--lilac-ash);
 	--table-alternating: var(--darker-slate-grey);
+	--base-color: #FFF6AB;
 }
 /* end dark mode */
 
@@ -297,6 +300,10 @@ th {
 
 tr:nth-child(even) {
 	background-color: var(--table-alternating);
+}
+
+p {
+	color: var(--base-color);
 }
 /* end general elements */
 

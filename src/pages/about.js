@@ -1,6 +1,6 @@
 function Presentation() {
     const title = `<h1 class="about-container-title">Sobre mim</h1>`;
-    const p = `ai eu faço uns bagui de computador lá na UNICID tecotecoteco e papa pepipeipei formaçao 2025`;
+    const p = `<p>ai eu faço uns bagui de computador lá na UNICID tecotecoteco e papa pepipeipei formaçao 2025</p>`;
 
     return [title, p];
 }
@@ -60,7 +60,10 @@ export function About() {
     aboutContainer.setAttribute("id", "about");
     aboutContainer.innerHTML = title;
 
-    aboutSection.appendChild(document.createTextNode(p));
+    const paragraph = document.createElement("p");
+    paragraph.innerHTML = p;
+
+    aboutSection.appendChild(paragraph);
     aboutSection.appendChild(InfoTable());
     aboutContainer.appendChild(aboutSection);
 
