@@ -1,15 +1,18 @@
 {
+  "homepage": "https://davideveryday.github.io/portfolio",
   "version": "1.0.0",
   "description": "My webpack project",
   "name": "webpack-project",
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
+    "deploy": "gh-pages -d dist",
     "build:dev": "webpack --mode=development",
     "serve": "webpack serve",
     "watch": "webpack --watch"
   },
   "devDependencies": {
     "css-loader": "^7.1.2",
+    "gh-pages": "^6.3.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.6",
     "mini-css-extract-plugin": "^2.10.0",
