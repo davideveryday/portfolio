@@ -2,8 +2,8 @@
   {
     "name": "MyExpo",
     "image": "/expo.png",
-    "description": "Virtual gallery using HTML5 Canvas and JavaScript implementing raycast to showcase my projects.",
-    "tools": "HTML5 Canvas and JavaScript",
+    "description": "Galeria virtual feita com HTML5 Canvas and JavaScript implementando raycast pra mostrar meus projetos.",
+    "tools": "HTML5 Canvas e JavaScript",
     "links": [
       "https://github.com/davideaded/myexpo",
       "https://davideaded.github.io/myExpo/"
@@ -12,7 +12,7 @@
   {
     "name": "HubStore",
     "image": "/fout.png",
-    "description": "A fictitious store based on the Fallout series. My second react project, experimenting with routes and interaction between components.",
+    "description": "Uma loja virtual fictícia baseada nos jogos antigos da série Fallout. Aprendendo sobre rotas e interação entre componentes no React.",
     "tools": "React",
     "links": [
       "https://github.com/davideaded/the-hub-store",
@@ -22,7 +22,7 @@
   {
     "name": "Pokemon Memory Card",
     "image": "/poke.png",
-    "description": "A simple and fun game using the Pokemon API. My first react project.",
+    "description": "Aprendendo React com API do Pokemon.",
     "tools": "React",
     "links": [
       "https://github.com/davideaded/pokemon-memory-card",
@@ -32,8 +32,8 @@
   {
     "name": "Snake Game",
     "image": "/snake.png",
-    "description": "Classic game made with HTML5 Canvas and JavaScript. Includes score, sounds and different visual styles.",
-    "tools": "HTML5 Canvas, JavaScript and css",
+    "description": "Jogo clássico da cobrinha usando HTML5 e Canvas. Tem score, som e diferentes temas de fundo.",
+    "tools": "HTML5 Canvas, JavaScript e css",
     "links": [
       "https://github.com/davideaded/snakegame",
       "https://davideaded.github.io/snakegame/"
@@ -42,7 +42,7 @@
   {
     "name": "Asciification",
     "image": "/python.png",
-    "description": "A very basic CLI script to transform an image into ASCII art.",
+    "description": "Um programa CLI para transformar imagens em arte ASCII.",
     "tools": "Python",
     "links": [
       "https://github.com/davideaded/asciification",

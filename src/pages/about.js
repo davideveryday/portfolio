@@ -1,6 +1,11 @@
 function Presentation() {
-    const title = `<h1 class="about-container-title">Sobre mim</h1>`;
-    const p = `<p>ai eu faço uns bagui de computador lá na UNICID tecotecoteco e papa pepipeipei formaçao 2025</p>`;
+    const title = `<h1 class="about-container-title section-title">Sobre mim</h1>`;
+    const p = `<p>Sou estudante de Ciência da Computação, com foco em desenvolvimento backend
+    e interesse em criar aplicações eficientes, escaláveis e bem estruturadas.
+    Gosto de entender como as coisas funcionam por trás dos sistemas,
+    desde bancos de dados até a lógica de negócio.
+    Estou sempre buscando evoluir, aprender novas tecnologias
+    e aplicar boas práticas nos meus projetos.</p>`;
 
     return [title, p];
 }

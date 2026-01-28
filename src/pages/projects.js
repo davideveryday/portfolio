@@ -1,7 +1,15 @@
 export function Projects() {
   const container = document.createElement("div");
+  container.setAttribute("id", "projects");
   container.classList.add("projects-container");
   container.classList.add("cards-container");
+
+  const title = document.createElement("h1");
+  title.className = "about-container-title";
+  title.classList.add("section-title");
+  title.innerHTML = `Projetos`;
+
+  container.appendChild(title);
 
   loadProjects(container);
   return container;
@@ -45,7 +53,7 @@ function createCard({ name, image, description, tools, links }) {
   desc.textContent = description;
 
   const toolsEl = document.createElement("p");
-  toolsEl.innerHTML = `<b>Tools:</b> ${tools}`;
+  toolsEl.innerHTML = `<b>Ferramentas:</b> ${tools}`;
 
   const linksDiv = document.createElement("div");
   linksDiv.className = "project-links-div";

@@ -21,7 +21,7 @@ function TextElements() {
     return [
         `<h1 class="main-container-title">Olá, eu sou o <span class="highlight">David Castro</span></h1>`,
         `<h2 class="main-container-subtitle">Estudante de ciência da computação e desenvolvedor backend</h2>`,
-        `<p class="main-container-p">Construindo aplicações web com foco no backend</p>`
+        `<p class="main-container-p">Crio aplicações web eficientes, escaláveis e bem estruturadas. Tenho experiência com JavaScript, React, Node.js, Java e bancos relacionais.</p>`
     ]
 
 }
