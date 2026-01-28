@@ -1,22 +1,12 @@
 [
   {
-    "name": "Shitty Tic Tac Toe",
-    "image": "/toe.png",
-    "description": "Simple tic tac toe game built to explore IIFE and factory function concepts.",
-    "tools": "JavaScript",
+    "name": "MyExpo",
+    "image": "/expo.png",
+    "description": "Virtual gallery using HTML5 Canvas and JavaScript implementing raycast to showcase my projects.",
+    "tools": "HTML5 Canvas and JavaScript",
     "links": [
-      "https://github.com/davideaded/shitty-tic-tac-toe",
-      "https://davideaded.github.io/shitty-tic-tac-toe/"
-    ]
-  },
-  {
-    "name": "Where is Waldo",
-    "image": "/wwaldo.png",
-    "description": "A where is waldo game based on pop culture characters. Implemented with React and Rails to exercise the communication between front and back-end. Unfortunately my free back-end host went down.",
-    "tools": "React, Ruby on Rails",
-    "links": [
-      "https://github.com/davideaded/where-is-waldo",
-      "https://main--cerulean-bavarois-35efc7.netlify.app/"
+      "https://github.com/davideaded/myexpo",
+      "https://davideaded.github.io/myExpo/"
     ]
   },
   {
@@ -50,13 +40,13 @@
     ]
   },
   {
-    "name": "MyExpo",
-    "image": "/expo.png",
-    "description": "Virtual gallery using HTML5 Canvas and JavaScript implementing raycast to showcase my projects.",
-    "tools": "HTML5 Canvas and JavaScript",
+    "name": "Asciification",
+    "image": "/python.png",
+    "description": "A very basic CLI script to transform an image into ASCII art.",
+    "tools": "Python",
     "links": [
-      "https://github.com/davideaded/myexpo",
-      "https://davideaded.github.io/myExpo/"
+      "https://github.com/davideaded/asciification",
+      ""
     ]
   }
 ]

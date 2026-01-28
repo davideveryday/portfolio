@@ -2,6 +2,7 @@ import "./style/styles.css";
 import ThemeHandler from "./ThemeHandler";
 import { MainBody } from "./pages/main";
 import { About } from "./pages/about";
+import { Projects } from "./pages/projects";
 
 const content = document.getElementById("content");
 const body = document.getElementsByTagName("body")[0];
@@ -13,4 +14,4 @@ themeBtn.addEventListener("click", () => themeHandler.toggle());
 
 content.appendChild(MainBody());
 content.appendChild(About());
-
+content.appendChild(Projects());

@@ -1,6 +1,3 @@
-import iguana from "/assets/iguana.jpg";
-
-
 function ImageContainer(image) {
     const container = document.createElement("div");
     container.classList.add("main-container-image");
@@ -40,7 +37,7 @@ export function MainBody() {
     textSectionDiv.innerHTML = `${title}${subtitle}${phrase}`;
     mainContainer.appendChild(textSectionDiv);
 
-    mainContainer.appendChild(ImageContainer(iguana));
+    mainContainer.appendChild(ImageContainer("/iguana.jpg"));
     mainContainer.appendChild(Contact());
 
     return mainContainer;

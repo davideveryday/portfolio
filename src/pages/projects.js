@@ -1,43 +1,77 @@
-import iguana from "/assets/iguana.jpg";
-import githubsvg from "/assets/github-mark.svg";
-import demosvg from "/assets/demo.svg";
-
-
 export function Projects() {
-    const projectsContainer = document.createElement("div");
-    projectsContainer.classList.add("projects-container");
-    const card = createCard("ddavid", iguana, "bagui doido mermao", "javascrept", "github", "linkedi");
+  const container = document.createElement("div");
+  container.classList.add("projects-container");
+  container.classList.add("cards-container");
 
-    projectsContainer.appendChild(card);
-
-    return projectsContainer;
+  loadProjects(container);
+  return container;
 }
 
-function createCard(name, image, description, tools, github, demo) {
-    const card = document.createElement("div");
-    card.className = "card";
+async function loadProjects(container) {
+  try {
+    const res = await fetch("/data/projects.json");
 
-    card.innerHTML = `
-    <img src="${image}" alt="${name}">
-    
-    <div class="card-info">
-      <h3>${name}</h3>
-      <p>${description}</p>
-      <p><b>Tools:</b> ${tools}</p>
+    if (!res.ok) {
+      throw new Error("Erro ao carregar JSON");
+    }
 
-      <div class="project-links-div">
-        <a href="${github}" target="_blank" class="github-nav link-btn">
-          Source Code<br>
-          <img src="${githubsvg}">
-        </a>
+    const projects = await res.json();
 
-        <a href="${demo}" target="_blank" class="live-nav link-btn">
-          Demo
-          <img src="${demosvg}">
-        </a>
-      </div>
-    </div>
-  `;
+    projects.forEach(project => {
+      const card = createCard(project);
+      container.appendChild(card);
+    });
 
-    return card;
+  } catch (err) {
+    console.error("Deu ruim:", err);
+  }
+}
+
+function createCard({ name, image, description, tools, links }) {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  const img = document.createElement("img");
+  img.src = image;
+  img.alt = name;
+
+  const info = document.createElement("div");
+  info.className = "card-info";
+
+  const title = document.createElement("h3");
+  title.textContent = name;
+
+  const desc = document.createElement("p");
+  desc.textContent = description;
+
+  const toolsEl = document.createElement("p");
+  toolsEl.innerHTML = `<b>Tools:</b> ${tools}`;
+
+  const linksDiv = document.createElement("div");
+  linksDiv.className = "project-links-div";
+
+  const github = createLink("Source", links[0], "/github-mark.svg");
+  const demo = createLink("Demo", links[1], "/demo.svg");
+
+  linksDiv.append(github, demo);
+  info.append(title, desc, toolsEl, linksDiv);
+  card.append(img, info);
+
+  return card;
+}
+
+function createLink(text, url, icon) {
+  const a = document.createElement("a");
+  a.classList.add("link-btn");
+  if (url) a.href = url;
+  a.target = "_blank";
+  a.rel = "noopener";
+
+  const img = document.createElement("img");
+  img.src = icon;
+
+  a.textContent = text;
+  a.appendChild(img);
+
+  return a;
 }
